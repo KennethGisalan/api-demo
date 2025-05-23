@@ -21,4 +21,12 @@ class UserController extends Controller
             'message' => 'Test route is working'
         ]);
     }
+
+    public function store(Request $request){
+        $user = User::create($request->all());
+        return response()->json([
+            'status' => 'success',
+            'data' => $user
+        ]);
+    }
 }
