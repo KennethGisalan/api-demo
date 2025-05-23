@@ -10,4 +10,4 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/test',[UserController::class, 'test']);
 Route::get('/users',[UserController::class, 'index']);
-Route::get('/register',[UserController::class, 'store']);
+Route::post('/register',[UserController::class, 'store']);
